@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.leon.singaporetransportservice.MainActivity">
+
+    <EditText
+        android:id="@+id/layout_main_bus_stop_number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/edit_text_border"
+        android:padding="10dp"
+        android:inputType="number"
+        android:hint="Key in bus stop number.."
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+    <EditText
+        android:id="@+id/layout_main_bus_number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/edit_text_border"
+        android:padding="10dp"
+        android:inputType="number"
+        android:hint="Key in bus number.."
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+
+
+    <ImageView
+        android:id="@+id/layout_main_bus_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"/>
+
+
+    <TextView
+        android:id="@+id/layout_main_bus_arrival"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="32dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:gravity="center" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:gravity="start">
+
+            <TextView
+                android:id="@+id/layout_main_next_bus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp">
+
+            <TextView
+                android:id="@+id/layout_main_next_bus_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/layout_main_bus_seat_availability"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:gravity="center"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/ic_check_black_24dp"
+        android:layout_margin="16dp" />
+
+
+</LinearLayout>
