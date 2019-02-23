@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.leon.singaporetransportservice.MainActivity">
+    tools:context="com.example.leon.singaporetransportservice.BusSearchActivity">
 
     <EditText
         android:id="@+id/layout_main_bus_stop_number"

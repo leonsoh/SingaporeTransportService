@@ -5,6 +5,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -19,9 +20,9 @@ import java.util.Date;
 
 import api.HttpRequest;
 
-public class MainActivity extends AppCompatActivity {
+public class BusSearchActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "BusSearchActivity";
 
     EditText editTextBusStopNumber, editTextBusNumber;
 
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.layout_bus_search);
 
 
         FloatingActionButton floatingActionButtonSubmit = (FloatingActionButton)findViewById(R.id.fab);
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                         String nextBusDate = bus2.getBusArrival();
                         String nextBusTwoDate = bus3.getBusArrival();
 
-                        SimpleDateFormat spf = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss");
+                        SimpleDateFormat spf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
                         Date newBusArrivalDate = spf.parse(busArrivalDate);
                         Date newNextBusDate = spf.parse(nextBusDate);
                         Date newNextBusTwoDate = spf.parse(nextBusTwoDate);
@@ -137,6 +138,11 @@ public class MainActivity extends AppCompatActivity {
                         String busArrivalTime = Long.toString(minutes).replaceAll("-", "");
                         String nextBusArrivalTime = Long.toString(minutes1).replaceAll("-", "");
                         String nextBusTwoArrivalTime = Long.toString(minutes2).replaceAll("-", "");
+
+                        Log.d(TAG, "newBusA: " + newBusArrivalDate.getTime());
+                        Log.d(TAG, "difference: " + diff);
+                        Log.d(TAG, "minutes: " + minutes);
+                        Log.d(TAG, "bus arrival time:" + busArrivalTime);
 
                         if (busArrivalTime.equals("0")) {
                             busArrivalTime = "Arriving!";

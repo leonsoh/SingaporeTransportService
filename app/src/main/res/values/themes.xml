@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SGTransportTheme" parent="Base.V7.Theme.AppCompat.Light">
+        <item name="android:windowBackground">@color/colorBackground</item>
+    </style>
+
+</resources>
